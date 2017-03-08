@@ -16,7 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ViewPagerWithDot.DotViewPagerActivity"></activity>
+        <activity android:name=".ViewPagerWithDot.DotViewPagerActivity" />
+        <activity android:name=".ItemSameWidthGridView.DemoGridViewActivity"></activity>
     </application>
 
 </manifest>

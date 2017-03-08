@@ -50,10 +50,15 @@ public class DemoViewPagerFragment extends Fragment {
         tabLayout = (TabLayout)root.findViewById(R.id.dot_tab);
         tabLayout.setupWithViewPager(viewPager);
 
-
         return root;
     }
 
+    /*
+    *
+    * Adapter
+    * 製造四頁大顏色頁面的Fragment
+    *
+    * */
     private class MyFragmentAdapter extends FragmentPagerAdapter {
 
         String[] color_array;

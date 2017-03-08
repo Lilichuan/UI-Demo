@@ -5,4 +5,5 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string name="demo_viewpager_dot">展示ViewPager和點點</string>
+    <string name="demo_grid">方格狀呈現列表</string>
 </resources>
