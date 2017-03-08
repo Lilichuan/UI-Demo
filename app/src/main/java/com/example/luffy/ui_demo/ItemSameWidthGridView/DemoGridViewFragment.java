@@ -193,6 +193,41 @@ public class DemoGridViewFragment extends Fragment {
         item.setPicResource(R.drawable.flower);
         item.setPic_str("花花XXXXXXXX號");
         list.add(item);
+
+        item = new PictureItem();
+        item.setPicResource(R.drawable.flower);
+        item.setPic_str("花花三十五號");
+        list.add(item);
+
+        item = new PictureItem();
+        item.setPicResource(R.drawable.flower);
+        item.setPic_str("花花8876766544號");
+        list.add(item);
+
+        item = new PictureItem();
+        item.setPicResource(R.drawable.flower);
+        item.setPic_str("花花IV號");
+        list.add(item);
+
+        item = new PictureItem();
+        item.setPicResource(R.drawable.flower);
+        item.setPic_str("花花XXXXXXXX號");
+        list.add(item);
+
+        item = new PictureItem();
+        item.setPicResource(R.drawable.flower);
+        item.setPic_str("花花三十五號");
+        list.add(item);
+
+        item = new PictureItem();
+        item.setPicResource(R.drawable.flower);
+        item.setPic_str("花花8876766544號");
+        list.add(item);
+
+        item = new PictureItem();
+        item.setPicResource(R.drawable.flower);
+        item.setPic_str("草草一號");
+        list.add(item);
     }
 
 }
