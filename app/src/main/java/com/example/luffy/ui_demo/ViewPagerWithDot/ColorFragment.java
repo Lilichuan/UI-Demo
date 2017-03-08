@@ -1,6 +1,7 @@
 package com.example.luffy.ui_demo.ViewPagerWithDot;
 
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -18,7 +19,7 @@ public class ColorFragment extends Fragment {
 
     private static final String ARG_COLOR = "param1";
 
-    private int m_color;
+    private String m_color;
 
 
     public ColorFragment() {
@@ -26,10 +27,10 @@ public class ColorFragment extends Fragment {
     }
 
 
-    public static ColorFragment newInstance(int color_value) {
+    public static ColorFragment newInstance(String color_value) {
         ColorFragment fragment = new ColorFragment();
         Bundle args = new Bundle();
-        args.putInt(ARG_COLOR, color_value);
+        args.putString(ARG_COLOR, color_value);
         fragment.setArguments(args);
         return fragment;
     }
@@ -38,7 +39,7 @@ public class ColorFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            m_color = getArguments().getInt(ARG_COLOR);
+            m_color = getArguments().getString(ARG_COLOR);
         }
     }
 
@@ -46,7 +47,7 @@ public class ColorFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_color, container, false);
-        v.setBackgroundColor(m_color);
+        v.setBackgroundColor(Color.parseColor(m_color));
         return v;
     }
 
