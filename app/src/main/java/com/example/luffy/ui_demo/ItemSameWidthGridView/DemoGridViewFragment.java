@@ -79,7 +79,11 @@ public class DemoGridViewFragment extends Fragment {
 
 
 
-
+    /*
+    *
+    * 給 RecyclerView 的 Adapter
+    *
+    * */
     private class MAdapter extends RecyclerView.Adapter<MViewHolder>{
 
         private LayoutInflater layoutInflater;
@@ -109,7 +113,10 @@ public class DemoGridViewFragment extends Fragment {
 
 
 
-
+    /*
+    *
+    * 存在於列表中的單一UI欄位
+    * */
     private class MViewHolder extends RecyclerView.ViewHolder{
 
         private ImageView imageView;
@@ -134,13 +141,15 @@ public class DemoGridViewFragment extends Fragment {
 
 
 
-
+    //資料列表
     private List<PictureItem> list = new ArrayList<>();
 
 
-
-
-
+    /*
+    *
+    * 單一數據資料
+    *
+    * */
     private class PictureItem{
 
         public String pic_str;
@@ -163,6 +172,7 @@ public class DemoGridViewFragment extends Fragment {
         }
     }
 
+    //製造假資料
     private void createFakeData(){
         PictureItem item = new PictureItem();
         item.setPicResource(R.drawable.flower);
