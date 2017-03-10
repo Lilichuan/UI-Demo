@@ -6,4 +6,12 @@
 
     <string name="demo_viewpager_dot">展示ViewPager和點點</string>
     <string name="demo_grid">方格狀呈現列表</string>
+    <string name="demo_entry">好看的入口頁面</string>
+
+    <string name="title_activity_navigetion_drawer">NavigetionDrawerActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
 </resources>

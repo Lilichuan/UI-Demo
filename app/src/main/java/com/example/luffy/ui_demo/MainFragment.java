@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.luffy.ui_demo.EntryActivity.NavigetionDrawerActivity;
 import com.example.luffy.ui_demo.ItemSameWidthGridView.DemoGridViewActivity;
 import com.example.luffy.ui_demo.ViewPagerWithDot.DotViewPagerActivity;
 
@@ -112,16 +113,9 @@ public class MainFragment extends Fragment {
 
     //建立大量重複的數據資料
     private void createItem(){
-        Item item = new Item();
-        item.title_str_id = R.string.demo_viewpager_dot;
-        item.intent = new Intent(getActivity(), DotViewPagerActivity.class);
-        itemList.add(item);
-
-        item = new Item();
-        item.title_str_id = R.string.demo_grid;
-        item.intent = new Intent(getActivity(), DemoGridViewActivity.class);
-        itemList.add(item);
-
+        itemList.add(new Item(R.string.demo_viewpager_dot, DotViewPagerActivity.class));
+        itemList.add(new Item(R.string.demo_grid, DemoGridViewActivity.class));
+        itemList.add(new Item(R.string.demo_entry, NavigetionDrawerActivity.class));
     }
 
     //存放大量重複的數據資料
@@ -129,7 +123,12 @@ public class MainFragment extends Fragment {
 
     //大量重複的數據資料
     private class Item{
-        public int title_str_id;
+        int title_str_id;
         private Intent intent;
+
+        Item(int str_id, Class<?> activity){
+            title_str_id = str_id;
+            intent = new Intent(getActivity(), activity);
+        }
     }
 }

@@ -17,7 +17,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".ViewPagerWithDot.DotViewPagerActivity" />
-        <activity android:name=".ItemSameWidthGridView.DemoGridViewActivity"></activity>
+        <activity android:name=".ItemSameWidthGridView.DemoGridViewActivity" />
+        <activity
+            android:name=".EntryActivity.NavigetionDrawerActivity"
+            android:label="@string/title_activity_navigetion_drawer"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>
