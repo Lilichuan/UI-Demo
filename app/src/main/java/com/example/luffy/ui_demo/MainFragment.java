@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import com.example.luffy.ui_demo.EntryActivity.NavigetionDrawerActivity;
 import com.example.luffy.ui_demo.ItemSameWidthGridView.DemoGridViewActivity;
+import com.example.luffy.ui_demo.SpinnerSample.SpinnerActivity;
 import com.example.luffy.ui_demo.ViewPagerWithDot.DotViewPagerActivity;
 
 import java.util.ArrayList;
@@ -116,6 +117,7 @@ public class MainFragment extends Fragment {
         itemList.add(new Item(R.string.demo_viewpager_dot, DotViewPagerActivity.class));
         itemList.add(new Item(R.string.demo_grid, DemoGridViewActivity.class));
         itemList.add(new Item(R.string.demo_entry, NavigetionDrawerActivity.class));
+        itemList.add(new Item(R.string.spinner_test, SpinnerActivity.class));
     }
 
     //存放大量重複的數據資料
