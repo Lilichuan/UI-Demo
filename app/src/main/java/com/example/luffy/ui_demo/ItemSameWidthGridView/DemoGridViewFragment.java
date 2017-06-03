@@ -1,19 +1,13 @@
 package com.example.luffy.ui_demo.ItemSameWidthGridView;
 
 
-import android.content.Context;
 import android.os.Bundle;
-import android.support.annotation.LayoutRes;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -71,7 +65,7 @@ public class DemoGridViewFragment extends Fragment {
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getActivity(), COLUMN_COUNT);
         recyclerView.setLayoutManager(gridLayoutManager);
 
-        recyclerView.setAdapter(new MAdapter(getActivity()));
+        recyclerView.setAdapter(new MAdapter());
 
         return root;
     }
@@ -86,15 +80,13 @@ public class DemoGridViewFragment extends Fragment {
     * */
     private class MAdapter extends RecyclerView.Adapter<MViewHolder>{
 
-        private LayoutInflater layoutInflater;
+        public MAdapter(){
 
-        public MAdapter(Context context){
-            layoutInflater = LayoutInflater.from(context);
         }
 
         @Override
         public MViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-            View v = layoutInflater.inflate(R.layout.item_pic_text, null);
+            View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_pic_text, null);
             return new MViewHolder(v);
         }
 
