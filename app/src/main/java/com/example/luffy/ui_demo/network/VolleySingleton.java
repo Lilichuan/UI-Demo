@@ -11,7 +11,7 @@ import com.android.volley.toolbox.Volley;
 import com.google.gson.Gson;
 
 /**
- * Created by tim on 2017/5/8.
+ * Created by tim.
  */
 
 public class VolleySingleton {
@@ -20,7 +20,7 @@ public class VolleySingleton {
 
     private RequestQueue mRequestQueue;
     private ImageLoader mImageLoader;
-    private static Context mCtx;
+    private Context mCtx;
     private Gson gson;
 
     private VolleySingleton(Context context){
@@ -52,7 +52,7 @@ public class VolleySingleton {
         return instance;
     }
 
-    public RequestQueue getRequestQueue() {
+    private RequestQueue getRequestQueue() {
         if (mRequestQueue == null) {
 
 

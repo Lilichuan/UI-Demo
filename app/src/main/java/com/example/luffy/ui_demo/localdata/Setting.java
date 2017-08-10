@@ -5,8 +5,6 @@ import android.content.SharedPreferences;
 import android.text.TextUtils;
 
 /**
- * Created by tim on 2017/4/24.
- *
  * 用SharedPreferences存放設定值。
  * 存放之後，有利於重複操作與測試
  */

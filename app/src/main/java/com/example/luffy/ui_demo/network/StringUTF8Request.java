@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by 阿銓 on 2017/3/13.
+ * Created by 阿銓.
  *
  * 一般的Volley的Request物件處理UTF8會亂碼，
  * 使用此Request物件可避免此Bug。

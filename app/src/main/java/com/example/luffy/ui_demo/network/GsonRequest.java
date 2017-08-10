@@ -13,7 +13,7 @@ import java.io.UnsupportedEncodingException;
 import java.util.Map;
 
 /**
- * Created by tim on 2017/5/9.
+ * Created by tim
  */
 
 public class GsonRequest<T> extends Request<T> {
