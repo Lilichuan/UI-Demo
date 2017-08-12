@@ -16,6 +16,7 @@ import com.example.luffy.ui_demo.EntryActivity.NavigetionDrawerActivity;
 import com.example.luffy.ui_demo.ItemSameWidthGridView.DemoGridViewActivity;
 import com.example.luffy.ui_demo.SpinnerSample.SpinnerActivity;
 import com.example.luffy.ui_demo.ViewPagerWithDot.DotViewPagerActivity;
+import com.example.luffy.ui_demo.example.ScrollingActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -118,6 +119,7 @@ public class MainFragment extends Fragment {
         itemList.add(new Item(R.string.demo_grid, DemoGridViewActivity.class));
         itemList.add(new Item(R.string.demo_entry, NavigetionDrawerActivity.class));
         itemList.add(new Item(R.string.spinner_test, SpinnerActivity.class));
+        itemList.add(new Item(R.string.scroll_info, ScrollingActivity.class));
     }
 
     //存放大量重複的數據資料

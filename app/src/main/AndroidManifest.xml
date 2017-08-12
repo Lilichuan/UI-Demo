@@ -22,7 +22,11 @@
             android:name=".EntryActivity.NavigetionDrawerActivity"
             android:label="@string/title_activity_navigetion_drawer"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".SpinnerSample.SpinnerActivity"></activity>
+        <activity android:name=".SpinnerSample.SpinnerActivity" />
+        <activity
+            android:name=".example.ScrollingActivity"
+            android:label="@string/title_activity_scrolling"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
