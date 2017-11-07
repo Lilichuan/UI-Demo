@@ -1,6 +1,8 @@
 package com.example.luffy.ui_demo;
 
 import android.support.annotation.NonNull;
+import android.support.annotation.StringRes;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.text.TextUtils;
 import android.util.Log;
@@ -32,10 +34,19 @@ public class ItfFragment extends Fragment{
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-
-        VolleySingleton.getInstance(getContext()).cancel(getIdTag());
-
+        cancelConnect();
     }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        cancelConnect();
+    }
+
+    private void cancelConnect(){
+        VolleySingleton.getInstance(getContext()).cancel(getIdTag());
+    }
+
 
     protected void showLogD(@NonNull String log){
         if(TextUtils.isEmpty(log) || !BuildConfig.DEBUG) {
@@ -50,5 +61,9 @@ public class ItfFragment extends Fragment{
             return;
         }
         Log.e(getIdTag(), log);
+    }
+
+    protected void showSnackBar(@StringRes int str, int len){
+        Snackbar.make(getView(), str, len).show();
     }
 }
