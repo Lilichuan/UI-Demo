@@ -26,7 +26,7 @@ import java.util.List;
 import java.util.Locale;
 
 /**
- * Created by 阿銓 on 2017/3/28.
+ * Created by 阿銓.
  * 呼叫裝置上的相機App幫本App拍照
  *
  */
@@ -71,10 +71,6 @@ public class PhotoUtil {
                     Manifest.permission.WRITE_EXTERNAL_STORAGE)
                     || ActivityCompat.shouldShowRequestPermissionRationale(mActivity,
                     Manifest.permission.CAMERA)){
-
-                // Show an explanation to the user *asynchronously* -- don't block
-                // this thread waiting for the user's response! After the user
-                // sees the explanation, try again to request the permission.
 
                 listener.showRequestPermissionRationale();
 
