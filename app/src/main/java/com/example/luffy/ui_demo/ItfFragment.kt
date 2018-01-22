@@ -21,11 +21,11 @@ class ItfFragment : Fragment() {
         get() = javaClass.simpleName
 
     protected val gson: Gson
-        get() = VolleySingleton.getInstance(context).gson
+        get() = VolleySingleton.instance!!.gson
 
     protected fun <T> startRequest(request: Request<T>) {
         request.tag = idTag
-        VolleySingleton.getInstance(context).addToRequestQueue(request)
+        VolleySingleton.instance!!.addToRequestQueue(request)
     }
 
     override fun onDestroyView() {
@@ -39,7 +39,7 @@ class ItfFragment : Fragment() {
     }
 
     private fun cancelConnect() {
-        VolleySingleton.getInstance(context).cancel(idTag)
+        VolleySingleton.instance!!.cancel(idTag)
     }
 
 
