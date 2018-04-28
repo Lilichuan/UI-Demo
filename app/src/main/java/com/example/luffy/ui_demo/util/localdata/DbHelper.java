@@ -1,4 +1,4 @@
-package com.example.luffy.ui_demo.localdata;
+package com.example.luffy.ui_demo.util.localdata;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
