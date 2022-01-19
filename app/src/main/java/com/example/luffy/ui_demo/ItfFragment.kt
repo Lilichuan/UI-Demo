@@ -1,8 +1,8 @@
 package com.example.luffy.ui_demo
 
-import android.support.annotation.StringRes
-import android.support.design.widget.Snackbar
-import android.support.v4.app.Fragment
+import androidx.annotation.StringRes
+import com.google.android.material.snackbar.Snackbar
+import androidx.fragment.app.Fragment
 import android.text.TextUtils
 import android.util.Log
 

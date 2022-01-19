@@ -2,7 +2,7 @@ package com.example.luffy.ui_demo.util;
 
 import android.icu.text.SimpleDateFormat;
 import android.icu.util.Calendar;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import java.text.ParseException;
 import java.util.Date;

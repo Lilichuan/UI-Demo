@@ -1,8 +1,7 @@
 package com.example.luffy.ui_demo.ItemSameWidthGridView;
 
-import android.app.Activity;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
+import androidx.fragment.app.FragmentActivity;
 import android.util.DisplayMetrics;
 
 import com.example.luffy.ui_demo.R;
