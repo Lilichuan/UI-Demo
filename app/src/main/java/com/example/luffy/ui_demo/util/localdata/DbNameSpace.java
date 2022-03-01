@@ -28,7 +28,7 @@ public abstract class DbNameSpace implements BaseColumns {
     protected String createString;
     protected String table_name;
 
-    public void DbNameSpace(String tableName) {
+    public DbNameSpace(String tableName) {
         this.table_name = tableName;
     }
 
@@ -56,5 +56,5 @@ public abstract class DbNameSpace implements BaseColumns {
         return "ALTER TABLE "+ table_name +" ADD COLUMN "+columnName + columnType;
     }
 
-    abstract String getCreateStr();
+    protected abstract String getCreateStr();
 }

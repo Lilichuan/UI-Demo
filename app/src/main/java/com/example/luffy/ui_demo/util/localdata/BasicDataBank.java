@@ -1,5 +1,6 @@
 package com.example.luffy.ui_demo.util.localdata;
 
+import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -105,6 +106,7 @@ public class BasicDataBank {
             return 0;
         }
         cursor.moveToFirst();
+        @SuppressLint("Range")
         int id = cursor.getInt(cursor.getColumnIndex(idColumn));
         cursor.close();
         return id;
