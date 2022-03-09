@@ -6,23 +6,26 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.provider.BaseColumns;
 import android.util.Log;
 
 import com.example.luffy.ui_demo.BuildConfig;
 
-public class BasicDataBank {
-    protected Context mContext;
+public abstract class BasicDataBank<E> {
     protected SQLiteDatabase db;
     protected SQLiteOpenHelper mHelper;
 
-    public BasicDataBank(Context context, SQLiteOpenHelper dbHelper){
-        mContext = context;
-        mHelper = dbHelper;
+    public BasicDataBank(SQLiteOpenHelper mHelper){
+        this.mHelper = mHelper;
     }
 
     protected void removeData(String tableName, String where, String[] whereArgs){
         getDb().delete(tableName, where, whereArgs);
     }
+
+    public abstract E toData(Cursor cv);
+
+    public abstract ContentValues toContentValues(E data);
 
     /**
      * 放入一筆資料
@@ -97,6 +100,11 @@ public class BasicDataBank {
                 null , null, null, null);
     }
 
+    protected Cursor getAll(String tableName){
+        return getDb().query(tableName, null, null, null,
+                null , null, BaseColumns._ID + DbNameSpace.ORDER_BY_DESC, null);
+    }
+
     public int getMaxId(String tableName, String idColumn){
         Cursor cursor = getDb().query(tableName, null, null, null,
                 null , null, idColumn + DbNameSpace.ORDER_BY_DESC, null);
@@ -125,10 +133,6 @@ public class BasicDataBank {
         }
     }
 
-    public Context getContext() {
-        return mContext;
-    }
-
     /**
      * 清空該表的所有資料
      *
@@ -145,7 +149,7 @@ public class BasicDataBank {
 
     /**
      * String[] param = getWhereParam(bean.getId() + "");
-        updateData(TableName.EXTRA_MEAL_LIST, values, where, param);
+     updateData(TableName.EXTRA_MEAL_LIST, values, where, param);
      * @param s1
      * @param s2
      * @return
